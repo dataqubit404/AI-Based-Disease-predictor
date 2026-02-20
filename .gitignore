@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Environments
+env/
+venv/
+.venv/
+ENV/
+
+# Model files
+*.joblib
+
+# System files
+.DS_Store
+Thumbs.db
+
+# VS Code
+.vscode/
