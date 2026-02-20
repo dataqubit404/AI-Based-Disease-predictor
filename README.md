@@ -1,137 +1,175 @@
+
 <h1 align="center"><b>AI Disease Prediction System</b></h1>
 
- An AI-powered web application that predicts the likelihood of diseases such as Diabetes, Heart Disease, Parkinson's and Chronic Kidney Disease based on user-provided health parameters. <br>Built using Python and Streamlit, this system leverages machine learning models to assist in early disease detection.
+<p align="center">
+An AI-powered web application that predicts the likelihood of multiple diseases such as <b>Diabetes, Heart Disease, Parkinson's and Chronic Kidney Disease</b> based on user-provided health parameters.
 <br>
+Built using <b>Python</b> and <b>Streamlit</b>, this system leverages machine learning models to assist in early disease detection.
+</p>
 
-## **📌Project Overview**
+---
 
-This project aims to provide users with an interactive platform to assess their risk for certain diseases. By inputting specific health metrics, users receive predictions that can guide them toward seeking medical advice or making lifestyle changes.
-<br>
+## 📌 Project Overview
 
-## **🧪Features**
+This project provides an interactive web-based platform where users can input medical parameters and receive real-time disease risk predictions.
 
-Disease Prediction: Predicts the likelihood of Diabetes, Heart Disease, Parkinson's and Chronic Kidney Disease based on user inputs.
+It integrates:
+- Machine Learning model training
+- Data preprocessing pipelines
+- Model serialization
+- Streamlit-based deployment
 
-Interactive Interface: User-friendly forms to enter health parameters.
+---
 
-Model Insights: Displays prediction results along with model confidence scores.
+## 🧪 Features
 
-Visualization: Graphical representation of feature importance and prediction probabilities.
+- ✅ Multi-Disease Prediction (Diabetes, Heart, Parkinson's, Kidney)
+- ✅ Interactive Streamlit UI
+- ✅ Trained ML models with saved scalers & feature sets
+- ✅ Confidence score display
+- ✅ Feature importance visualization
+- ✅ Modular and scalable architecture
+- ✅ Easy local deployment
 
-## **💻Tech Stack**
+---
 
-Programming Language: Python
+## 💻 Tech Stack
 
-Machine Learning Libraries: Scikit-learn, XGBoost
+**Programming Language:** Python  
+**Machine Learning:** Scikit-learn, XGBoost  
+**Web Framework:** Streamlit  
+**Data Handling:** Pandas, NumPy  
+**Visualization:** Matplotlib, Seaborn  
+**Model Serialization:** joblib / pickle  
+**Deployment:** Streamlit Cloud  
 
-Web Framework: Streamlit
+---
 
-Data Handling: Pandas, NumPy
+## 📁 Folder Structure
 
-Visualization: Matplotlib, Seaborn
-
-Model Serialization: joblib
-
-Deployment: Streamlit Cloud
-<br>
-
-## **📁 Folder Structure**
 ```bash
 AI_Disease_Predictor/
+│
 ├── app/
 │   └── streamlit_app.py            # Main Streamlit application
 │
 ├── models/                         # Trained ML models and preprocessing files
-│   ├── diabetes.pkl                # Diabetes prediction model
-│   ├── diabetes_features.pkl       # Feature list for Diabetes model
-│   ├── diabetes_scaler.pkl         # Scaler for Diabetes model
+│   ├── diabetes.pkl
+│   ├── diabetes_scaler.pkl
+│   ├── heart.pkl
+│   ├── kidney.pkl
+│   ├── parkinsons.pkl
+│   └── ...
 │
-│   ├── heart.pkl                   # Heart Disease prediction model
-│   ├── heart_features.pkl          # Feature list for Heart model
-│   ├── heart_scaler.pkl            # Scaler for Heart model
+├── notebooks/                      # Model training notebooks
+│   ├── diabetes_model.ipynb
+│   ├── heart_model.ipynb
+│   ├── kidney_model.ipynb
+│   └── parkinsons_model.ipynb
 │
-│   ├── kidney.pkl                  # Chronic Kidney Disease prediction model
-│   ├── kidney_features.pkl         # Feature list for Kidney model
-│   ├── kidney_scaler.pkl           # Scaler for Kidney model
+├── data/                           # Dataset files
+│   ├── diabetes.csv
+│   ├── heart.csv
+│   ├── kidney_disease.csv
+│   └── parkinsons.csv
 │
-│   ├── parkinsons.pkl              # Parkinson's Disease prediction model
-│   ├── parkinsons_features.pkl     # Feature list for Parkinson's model
-│   └── parkinsons_scaler.pkl       # Scaler for Parkinson's model
-│
-├── notebooks/
-│   ├── diabetes_model.ipynb        # Diabetes model training notebook
-│   ├── heart_model.ipynb           # Heart Disease model training notebook
-│   ├── kidney_model.ipynb          # Chronic Kidney Disease model training notebook
-│   └── parkinsons_model.ipynb      # Parkinson's model training notebook
-│
-├── data/
-│   ├── diabetes.csv                # Dataset for Diabetes
-│   ├── heart.csv                   # Dataset for Heart Disease
-│   ├── kidney_disease.csv          # Dataset for Chronic Kidney Disease
-│   └── parkinsons.csv              # Dataset for Parkinson's
-│
-├── requirements.txt                # Python dependencies
-└── README.md                       # Project documentation
-
+├── requirements.txt
+└── README.md
 ```
-
 ## 🚀 Getting Started
-1.&nbsp;Clone the Repository
+
+### 1️⃣ Clone the Repository
+
 ```bash
-git clone https://github.com/Vaenvoice/AI_Disease_Predictor.git
-```
-```bash
+git clone https://github.com/dataqubit404/AI_Disease_Predictor.git
 cd AI_Disease_Predictor
 ```
-2.&nbsp;Set Up a Virtual Environment
 
-For Windows:
+### 2️⃣ Create Virtual Environment
+
+**Windows**
 
 ```bash
 python -m venv venv
-```
-```bash
 venv\Scripts\activate
 ```
 
-For macOS/Linux:
+**macOS / Linux**
+
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
-3. Install Dependencies
+
+### 3️⃣ Install Dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
-4. Run the Application Locally
+
+### 4️⃣ Run the Application
+
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-#### Open your browser and navigate to http://localhost:8501 to interact with the application.
+Open your browser and go to:
+
+`http://localhost:8501`
 
 ## 📊 Model Training
 
-The machine learning models are trained using the datasets located in the data/ folder. Jupyter notebooks in the notebooks/ directory provide step-by-step guidance on training models for each disease:
+The machine learning models are trained using the datasets located in the `data/` folder. Jupyter notebooks in the `notebooks/` directory provide step-by-step guidance on training models for each disease:
 
-Diabetes: notebooks/diabetes_model.ipynb
+- **Diabetes:** notebooks/diabetes_model.ipynb  
+- **Heart Disease:** notebooks/heart_model.ipynb  
+- **Chronic Kidney Disease:** notebooks/kidney_model.ipynb  
+- **Parkinson's Disease:** notebooks/parkinsons_model.ipynb  
 
-Heart Disease: notebooks/heart_model.ipynb
+Each notebook includes:
 
-Parkinson's: notebooks/parkinsons_model.ipynb
+- Data preprocessing  
+- Feature selection  
+- Model training  
+- Model evaluation  
+- Saving trained models and scalers  
+
+After training, models are stored inside the `models/` directory for deployment.
+
+---
 
 ## 🌐 Deployment
 
-The application is deployed on [Streamlit](https://streamlit.io/)
-. Once deployed, you can access the live application via the provided localhost URL.
+The application is deployed using **Streamlit**.
 
+### 🚀 Run Locally
+
+```bash
+streamlit run app/streamlit_app.py
+```
 ## 📄 License
 
-This project is licensed under the MIT License - see the LICENSE
- file for details.
+This project is licensed under the MIT License — see the `LICENSE` file for details.
+
+You are free to:
+
+- Use  
+- Modify  
+- Distribute  
+- Publish  
+- Sublicense  
+
+With proper attribution.
+
+---
 
 ## 📬 Contact
 
-For any inquiries or contributions, please contact <br>[Vaenvoice](https://github.com/Vaenvoice)
-<br>[proxybinder](https://github.com/proxybinder)
+For any inquiries, collaborations, or contributions, please contact:
+
+👨‍💻 **GitHub:** https://github.com/dataqubit404  
+
+You can also open an issue in the repository for questions or suggestions.
+
+
 
