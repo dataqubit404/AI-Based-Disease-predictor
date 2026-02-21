@@ -13,121 +13,91 @@ def apply_theme():
     choice = st.sidebar.radio("🎨 Theme", ["Light", "Dark"])
 
     if choice == "Dark":
-        st.session_state.dark_mode = True
-        st.markdown(
-            """
-            <style>
-            body, .stApp {
-                background-color: #121212 !important;
-                color: #ffffff !important;
-            }
-            .stSidebar, .css-1d391kg, .css-qrbaxs {
-                background-color: #1e1e1e !important;
-                color: #ffffff !important;
-            }
-            .stButton>button {
-                background-color: #bb86fc !important;
-                color: black !important;
-                border-radius: 8px !important;
-                font-weight: bold;
-            }
-            .stNumberInput>div>input, .stSelectbox>div>select, .stSlider>div>div>input {
-                background-color: #333 !important;
-                color: #ffffff !important;
-                font-weight: bold;
-            }
-            h1, h2, h3, h4, h5, h6, label, .css-10trblm {
-                color: #ffffff !important;
-                text-shadow: 0px 0px 6px rgba(255,255,255,0.8);
-            }
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
+        bg = "#0f172a"
+        card = "rgba(255,255,255,0.05)"
+        text = "white"
+        accent = "#8b5cf6"
     else:
-        st.markdown(
-            """
-            <style>
-            body, .stApp {
-                background-color: white !important;
-                color: black !important;
-            }
+        bg = "#f8fafc"
+        card = "rgba(255,255,255,0.7)"
+        text = "#1e293b"
+        accent = "#6C63FF"
 
-            /* Fix tooltip icon color in light mode */
-            [data-testid="stWidgetTooltipIcon"] svg path,
-            [data-testid="stWidgetTooltipIcon"] svg circle,
-            [data-testid="stWidgetTooltipIcon"] svg line {
-                stroke: #6C63FF !important;
-                fill: #6C63FF !important;
-                color: #6C63FF !important;
-            }
+    st.markdown(f"""
+        <style>
 
+        /* App background */
+        .stApp {{
+            background: linear-gradient(135deg, {bg}, #1e293b);
+            color: {text};
+            font-family: 'Segoe UI', sans-serif;
+        }}
 
+        /* Glass Card */
+        .block-container {{
+            padding-top: 2rem;
+        }}
 
-            .stAppHeader, .stHeader {
-                background: #1e1e1e !important; 
-                color: #222 !important;         
-            }
+        section.main > div {{
+            background: {card};
+            backdrop-filter: blur(12px);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+            transition: all 0.4s ease-in-out;
+        }}
 
-            /* Sidebar background */
-            .stSidebar, .css-1d391kg, .css-qrbaxs {
-                background-color: #1e1e1e !important; 
-                color: black !important;              
-            }
-            
-            /* Sidebar titles and labels */
-            .stSidebar h1, .stSidebar h2, .stSidebar h3, .stSidebar h4, .stSidebar h5, .stSidebar h6,
-            .stSidebar label, .stSidebar .css-10trblm, .stSidebar .stRadio label, .stSidebar .stMarkdown,
-            .stSidebar .stTitle, .stSidebar .stButton > button {
-                color: white !important;
-                text-shadow: none !important;
-            }
+        section.main > div:hover {{
+            transform: scale(1.01);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+        }}
 
-            .stButton>button {
-                background-color: #bb86fc !important;
-                color: white !important;
-                border-radius: 8px !important;
-                font-weight: bold;
-            }
+        /* Buttons */
+        .stButton>button {{
+            background: linear-gradient(135deg, {accent}, #9333ea);
+            color: white;
+            border-radius: 12px;
+            padding: 0.6em 1.5em;
+            font-weight: 600;
+            border: none;
+            transition: all 0.3s ease-in-out;
+        }}
 
-            .stNumberInput>div>input, 
-            .stSelectbox>div>div , 
-            .stSelectbox>div>select, 
-            .stSlider>div>div>input,
-            .stSlider .st-bf {
-                background-color: #ffffff !important;
-                color: black !important;
-                font-weight: normal;
-                border: 1px solid #ccc !important;
-            }
-            /* Main app text */
-            h1, h2, h3, h4, h5, h6, label, .css-10trblm, .st-ae, .st-ag, .st-ai, .st-as {
-                color: black !important;
-                text-shadow: none !important;
-            }
+        .stButton>button:hover {{
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }}
 
-            /* Dropdown box*/
-            [data-baseweb="popover"], 
-            [data-baseweb="menu"], 
-            ul[data-baseweb="menu"], 
-            div[data-baseweb="popover"] > div {
-                background-color: #fff !important;
-                color: #222 !important;
-                border-radius: 8px !important;
-                box-shadow: 0 2px 8px rgba(0,0,0,0.12) !important;
-            }
+        /* Sliders */
+        .stSlider > div > div > div > div {{
+            background: {accent} !important;
+        }}
 
-            [data-baseweb="menu"] [role="option"], 
-            ul[data-baseweb="menu"] li, 
-            li[role="option"] {
-                background: #fff !important;
-                color: #222 !important;
-            }
+        /* Selectbox Hover */
+        div[data-baseweb="select"]:hover {{
+            transform: scale(1.02);
+            transition: 0.3s;
+        }}
 
-            </style>
-            """,
-            unsafe_allow_html=True,
-        )
+        /* Sidebar */
+        section[data-testid="stSidebar"] {{
+            background: linear-gradient(180deg, {accent}, #1e293b);
+            color: white;
+        }}
+
+        section[data-testid="stSidebar"] * {{
+            color: white !important;
+        }}
+
+        /* Progress bars */
+        .stProgress > div > div > div {{
+            background-color: {accent};
+        }}
+
+        </style>
+    """, unsafe_allow_html=True)
+           
+           
 
 
 # ========================
