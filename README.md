@@ -7,6 +7,19 @@ An AI-powered web application that predicts the likelihood of multiple diseases 
 Built using <b>Python</b> and <b>Streamlit</b>, this system leverages machine learning models to assist in early disease detection.
 </p>
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python">
+  <img src="https://img.shields.io/badge/Streamlit-Web%20App-red?logo=streamlit">
+  <img src="https://img.shields.io/badge/Jupyter-Notebook-F37626?logo=jupyter">
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas">
+  <img src="https://img.shields.io/badge/NumPy-Numerical%20Computing-013243?logo=numpy">
+  <img src="https://img.shields.io/badge/Scikit--Learn-Machine%20Learning-F7931E?logo=scikitlearn">
+  <img src="https://img.shields.io/badge/Matplotlib-Data%20Visualization-11557C?logo=plotly">
+  <img src="https://img.shields.io/badge/XGBoost-Gradient%20Boosting-FF6600?logo=xgboost">
+  <img src="https://img.shields.io/badge/Seaborn-Statistical%20Visualization-4C72B0">
+  <img src="https://img.shields.io/badge/Joblib-Model%20Persistence-00A98F">
+</p>
+
 ---
 
 ## 📌 Project Overview
@@ -32,6 +45,61 @@ It integrates:
 - ✅ Easy local deployment
 
 ---
+
+## 🚀 Future Upcoming Features
+
+### 📸 Image-Based Disease Detection
+- Upload or capture medical images (e.g., skin, eye, throat conditions)
+- Deep Learning (CNN) powered analysis
+- Early-stage detection assistance
+- Confidence score with safety disclaimer
+
+### 🤖 AI-Powered Medical Chatbot
+- Conversational symptom checker
+- Smart follow-up questioning
+- Preliminary risk assessment
+- Calm and safe medical guidance
+- Pediatric and adult health coverage
+
+### 🧬 Personalized Risk Assessment Engine
+- Genetic history integration
+- Lifestyle & dietary habit analysis
+- Recent medical history evaluation
+- Dynamic risk scoring (Low / Moderate / High)
+
+### 💊 Health Guidance Module
+- General treatment awareness
+- Commonly prescribed medicine information (no dosage advice)
+- Home remedies for mild conditions
+- Preventive lifestyle recommendations
+
+### 📊 Smart Health Reports
+- Downloadable PDF health summary
+- Risk breakdown with visual insights
+- Recommendation checklist
+
+### 👤 User Accounts & Dashboard
+- Secure login system
+- Prediction history tracking
+- Health trend monitoring
+- Personalized recommendations over time
+
+### 👨‍⚕️ Doctor Recommendation Integration
+- Specialist suggestions based on prediction
+- Category-based doctor directory (Child, Adult, Specialist)
+- Emergency warning alerts when required
+
+### 🌍 Multi-Disease Expansion
+- Diabetes prediction
+- Liver disease detection
+- Lung condition analysis
+- Stroke risk prediction
+- Thyroid disorder assessment
+- Anemia detection
+
+---
+
+⚠️ Note: This system is designed for educational and early screening purposes only and will not replace professional medical consultation.
 
 ## 💻 Tech Stack
 
@@ -81,8 +149,8 @@ AI_Disease_Predictor/
 ### 1️⃣ Clone the Repository
 
 ```bash
-git clone https://github.com/dataqubit404/AI_Disease_Predictor.git
-cd AI_Disease_Predictor
+git clone https://github.com/dataqubit404/AI-Based-Disease-Predictor.git
+cd AI-Based-Disease-Predictor
 ```
 
 ### 2️⃣ Create Virtual Environment
@@ -113,10 +181,6 @@ pip install -r requirements.txt
 streamlit run app/streamlit_app.py
 ```
 
-Open your browser and go to:
-
-`http://localhost:8501`
-
 ## 📊 Model Training
 
 The machine learning models are trained using the datasets located in the `data/` folder. Jupyter notebooks in the `notebooks/` directory provide step-by-step guidance on training models for each disease:
@@ -138,28 +202,9 @@ After training, models are stored inside the `models/` directory for deployment.
 
 ---
 
-## 🌐 Deployment
-
-The application is deployed using **Streamlit**.
-
-### 🚀 Run Locally
-
-```bash
-streamlit run app/streamlit_app.py
-```
 ## 📄 License
 
-This project is licensed under the MIT License — see the `LICENSE` file for details.
-
-You are free to:
-
-- Use  
-- Modify  
-- Distribute  
-- Publish  
-- Sublicense  
-
-With proper attribution.
+Only for Educational Purposes.
 
 ---
 
@@ -170,6 +215,7 @@ For any inquiries, collaborations, or contributions, please contact:
 👨‍💻 **GitHub:** https://github.com/dataqubit404  
 
 You can also open an issue in the repository for questions or suggestions.
+
 
 
 
