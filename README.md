@@ -46,6 +46,25 @@ It integrates:
 
 ---
 
+## 📸 Demo Screenshots
+
+### Dark Mode
+<p align="center">
+  <img src="images/Dark_mode.png" width="850">
+</p>
+
+### Light Mode & Feature Selection
+<p align="center">
+  <img src="images/Light_mode.png" width="850">
+</p>
+
+### 📊 Prediction Dashboard
+<p align="center">
+  <img src="images/Prediction.png" width="850">
+</p>
+
+---
+
 ## 🚀 Future Upcoming Features
 
 ### 📸 Image-Based Disease Detection
